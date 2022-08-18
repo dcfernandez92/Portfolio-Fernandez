@@ -1,0 +1,349 @@
+:root {
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ----------------------------- CONTENEDOR GRID ----------------------------- */
+
+.grid-container {
+    font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", system-ui, sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 80px auto 50px;
+    background-color: #082844;
+}
+
+/* ----------------------------- HEADER ----------------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+
+
+.logo {
+    margin: 10px 20px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    
+}
+
+.options {
+    display: none;
+}
+
+.hamburgerIcon {
+    color: #F67280;
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+/* ----------------------------- MAIN ----------------------------- */
+
+.main {
+    padding: 50px 30px;
+    line-height: 1.3;
+}
+
+h1 {
+    margin-left: 5px;
+    color: #F67280;
+    font-weight: 400;
+    font-family: var(--font-mono);
+    font-size: 18px;
+}
+
+h2 {
+    color: #CCD6F6;
+}
+
+h3 {
+    color: #8892b0;
+}
+
+.bigHeading {
+    margin-top: 10px;
+    line-height: 1.1;
+    font-size: clamp(32px, 8vw, 80px);
+}
+
+.main p {
+    margin: 20px 0 0 3px;
+    color: #8892b0;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+span {
+    color: #F67280;
+}
+
+.conocemeBtn {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.conocemeBtn a {
+    color: #F67280;
+    font-family: var(--font-mono);
+    padding: 15px 50px;
+    border: 1px solid #F67280;
+    border-radius: 5px;
+}
+
+.conocemeBtn a:hover {
+    text-align: center;
+    transition: 0.2s;
+}
+
+.conocemeBtn a:hover {
+    background-color: rgb(246, 116, 129, 0.1);
+}
+
+/* ----------------------------- FOOTER ----------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMediaIcons ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.socialMediaIcons ul li {
+    padding-left: 10px;
+}
+
+.socialMediaIcons i {
+    color: #8892B0;
+}
+
+.copyright a {
+    color: #8892B0;
+    font-size: small;
+}
+
+a:hover {
+    color: #F67280;
+}
+
+i:hover {
+    color: #F67280;
+}
+
+.child-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.child-image img {
+    width: 100%;
+    filter: grayscale(100%) contrast(1);
+    border-radius: 2%;
+    margin-top: 25px;
+}
+
+.child-image img:hover {
+    filter: none;
+}
+
+/* ----------------------------- ABOUT ----------------------------- */
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #8892B0;
+    font-size: small;
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.skill-list li::before {
+    color: #F67280;
+    content: "►";
+    display: inline-block;
+    width: 20px;
+}
+
+.skill-list li {
+    margin: 0 0 5px 15px;
+    font-family: var(--font-mono);
+}
+
+.skill-list li:hover {
+    color: #F67280;
+}
+
+/* ----------------------------- EXPERIENCE ----------------------------- */
+
+.job-list {
+    color: #8892B0;
+    margin: 20px 0px;
+    padding: 0 20px;
+}
+
+.job-list li {
+    margin: 0 0 15px 15px;
+    font-family: var(--font-mono);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.job-list li:hover {
+    color: #F67280;
+}
+
+/* ----------------------------- CONTACT ----------------------------- */
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.styledForm {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #F67280;
+    transition: all 0.3s;
+    padding: 7px;
+    margin-bottom: 10px;
+    width: 100%;
+    resize: none;
+}
+
+.submitBtn {
+    width: 100%;
+    background: #082844;
+    border-radius: 5px;
+    border: 1px solid #F67280;
+    cursor: pointer;
+    color: #F67280;
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.submitBtn:hover {
+    background-color: rgb(246, 116, 129, 0.1);
+    font-weight: 700;
+    transition: 200ms;
+}
+
+
+/* ----------------------------- RESPONSIVE ----------------------------- */
+
+@media only screen and (min-width: 480px) {
+
+    .conocemeBtn {
+        text-align: unset;
+    }
+
+    .main {
+        justify-self: center;
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .containerDescription {
+        width: 50%;
+    }
+
+    .hamburgerIcon {
+        display: none;
+    }
+
+    .options {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    .menu ol {
+        display: flex;
+        list-style-type: decimal-leading-zero;
+        color: #F67280;
+        margin-right: 30px;
+    }
+
+    .menu li {
+        margin-left: 50px;
+    }
+
+    .menu ol a {
+        font-family: var(--font-mono);
+        text-align: center;
+        color: white;
+        font-size: small;
+    }
+
+    nav a:hover {
+        color: #F67280;
+    }
+
+    .containerBtn {
+        margin-top: 2px;
+    }
+
+    .containerBtn a {
+        color: #F67280;
+        font-size: small;
+        padding: 12px 15px;
+        border: 1px solid #F67280;
+        border-radius: 5px;
+    }
+
+    .containerBtn a:hover {
+        background-color: rgb(246, 116, 129, 0.1);
+    }
+
+    section h2 {
+        color: #CCD6F6;
+        font-size: 35px;
+        text-shadow: 1px 1px 5px black;
+    }
+
+    section h2:hover {
+        color: #F67280
+    }
+
+    .grid-section {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        column-gap: 50px;
+        max-width: 1200px;
+    }
+
+    .grid-section .skill-list {
+        order: 1;
+        margin-left: 50px;
+    }
+
+    .child-image img {
+        width: 80%;
+    }
+}
