@@ -1,3 +1,10 @@
+@media only screen and (min-width: 360px) {
+    .skill-list {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px 0;
+    }
+}
+
 @media only screen and (min-width: 480px) {
 
     .navbar .containerBtn {
@@ -33,7 +40,7 @@
 
         ol {
             font-family: $font-mono;
-            list-style-type: decimal-leading-zero;            
+            list-style-type: decimal-leading-zero;
             margin-right: 30px;
 
             li {
@@ -70,11 +77,11 @@
         font-size: 35px;
         text-shadow: 1px 1px 5px black;
 
-        &:hover{
+        &:hover {
             color: $detail-text-color;
         }
     }
-    
+
     .grid-section {
         display: grid;
         grid-template-columns: 2fr 2fr;
@@ -89,5 +96,5 @@
         img {
             width: 80%;
         }
-    }    
+    }
 }
