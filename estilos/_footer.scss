@@ -1,0 +1,32 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            padding-left: 10px;
+        }
+
+        i {
+            color: $text-color2;
+
+            &:hover {
+                color: $detail-text-color;
+            }
+        }
+    }
+
+    .copyright a {
+        color: $text-color2;
+        font-size: small;
+
+        &:hover {
+            color: $detail-text-color;
+        }
+    }
+}

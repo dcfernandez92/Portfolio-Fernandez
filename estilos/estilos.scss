@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+$bg-color: #082844;
+$detail-text-color: #F67280;
+$white-text-color: white;
+$text-color: #CCD6F6;
+$text-color2: #8892B0;
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+li:hover{
+    color: $detail-text-color;
+}
+
+.grid-container {
+    font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", system-ui, sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 80px auto 50px;
+    background-color: $bg-color;
+}
+
+@import "_nav";
+@import "_main";
+@import "_footer";
+@import "_about";
+@import "_experience";
+@import "_work";
+@import "_contact";
+@import "_responsive";
