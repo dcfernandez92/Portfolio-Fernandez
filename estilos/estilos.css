@@ -1,414 +1,345 @@
-:root {
-    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-}
-
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+li:hover {
+  color: #F67280;
 }
 
 /* ----------------------------- CONTENEDOR GRID ----------------------------- */
-
 .grid-container {
-    font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", system-ui, sans-serif;
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: 80px auto 50px;
-    background-color: #082844 !important;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", system-ui, sans-serif;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 80px auto 50px;
+  background-color: #082844;
 }
 
 /* ----------------------------- HEADER ----------------------------- */
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation-duration: 0.8s;
-    animation-name: aparecer;
-    animation-direction: normal;
-    animation-iteration-count: 1;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  background-color: #082844;
+}
+.navbar .logo {
+  margin: 10px 20px;
+}
+.navbar .logo img {
+  width: 60px;
+  height: 60px;
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler .hamburgerIcon {
+  color: #F67280;
+  font-size: 30px;
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #F67280;
+}
+.navbar .containerBtn {
+  padding: 0 50px;
+}
+.navbar .containerBtn a {
+  border: 1px solid #F67280;
+  border-radius: 5px;
+  color: #F67280;
+}
+.navbar .containerBtn a:hover {
+  background-color: rgba(246, 116, 129, 0.1);
 }
 
 @keyframes aparecer {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-.logo {
-    margin: 10px 20px;
-}
-
-.logo img {
-    width: 60px;
-    height: 60px;
-}
-
-.styled-navbar{
-    background-color: #082844;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color:white;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #F67280;
-}
-
-.hamburgerIcon {
-    color: #F67280;
-    font-size: 30px;
-}
-
-.navbar-toggler{
-    border: none;
-}
-
-.containerBtn{
-    padding: 0 100px;
-}
-.containerBtn a{
-    border: 1px solid #F67280;
-    border-radius: 5px;
-    color: #F67280;
-}
-
-.containerBtn a:hover {
-    background-color: rgb(246, 116, 129, 0.1);
-}
-
 /* ----------------------------- MAIN ----------------------------- */
-
 .main {
-    padding: 50px 30px;
-    line-height: 1.3;
-    animation-duration: 0.8s;
-    animation-name: aparecer;
-    animation-direction: normal;
-    animation-iteration-count: 1;
+  padding: 50px 30px;
+  line-height: 1.3;
+  animation-duration: 0.8s;
+  animation-name: aparecer;
+  animation-direction: normal;
+  animation-iteration-count: 1;
 }
-
-h1 {
-    margin-left: 5px;
-    color: #F67280;
-    font-weight: 400;
-    font-family: var(--font-mono);
-    font-size: 18px;
+.main h1 {
+  margin-left: 5px;
+  color: #F67280;
+  font-weight: 400;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 18px;
 }
-
-h2 {
-    color: #CCD6F6;
+.main .bigHeading {
+  margin-top: 10px;
+  line-height: 1.1;
+  font-size: clamp(32px, 8vw, 80px);
 }
-
-h3 {
-    color: #8892b0;
+.main h2 {
+  color: #CCD6F6;
 }
-
-.bigHeading {
-    margin-top: 10px;
-    line-height: 1.1;
-    font-size: clamp(32px, 8vw, 80px);
+.main h3 {
+  color: #8892B0;
 }
-
 .main p {
-    margin: 20px 0 0 3px;
-    color: #8892b0;
-    line-height: 1.6;
-    font-weight: 600;
+  margin: 20px 0 0 3px;
+  color: #8892B0;
+  line-height: 1.6;
+  font-weight: 600;
 }
-
-span {
-    color: #F67280;
+.main span {
+  color: #F67280;
 }
-
-.conocemeBtn {
-    margin-top: 50px;
-    text-align: center;
+.main .conocemeBtn {
+  margin-top: 50px;
+  text-align: center;
 }
-
-.conocemeBtn a {
-    color: #F67280;
-    font-family: var(--font-mono);
-    padding: 15px 50px;
-    border: 1px solid #F67280;
-    border-radius: 5px;
+.main .conocemeBtn a {
+  color: #F67280;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  padding: 15px 50px;
+  border: 1px solid #F67280;
+  border-radius: 5px;
 }
-
-.conocemeBtn a:hover {
-    text-align: center;
-    transition: 0.2s;
-}
-
-.conocemeBtn a:hover {
-    background-color: rgb(246, 116, 129, 0.1);
+.main .conocemeBtn a:hover {
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+  background-color: rgba(246, 116, 129, 0.1);
 }
 
 /* ----------------------------- FOOTER ----------------------------- */
-
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.socialMediaIcons ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
+footer ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
 }
-
-.socialMediaIcons ul li {
-    padding-left: 10px;
+footer ul li {
+  padding-left: 10px;
 }
-
-.socialMediaIcons i {
-    color: #8892B0;
+footer ul i {
+  color: #8892B0;
 }
-
-.copyright a {
-    color: #8892B0;
-    font-size: small;
+footer ul i:hover {
+  color: #F67280;
 }
-
-a:hover {
-    color: #F67280;
+footer .copyright a {
+  color: #8892B0;
+  font-size: small;
 }
-
-i:hover {
-    color: #F67280;
+footer .copyright a:hover {
+  color: #F67280;
 }
 
 .child-text p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .child-image img {
-    width: 100%;
-    filter: grayscale(100%) contrast(1);
-    border-radius: 2%;
-    margin-top: 25px;
+  width: 100%;
+  filter: grayscale(100%) contrast(1);
+  border-radius: 2%;
+  margin-top: 25px;
 }
-
 .child-image img:hover {
-    filter: none;
+  filter: none;
 }
-
-/* ----------------------------- ABOUT ----------------------------- */
 
 .skill-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    color: #8892B0;
-    font-size: small;
-    list-style: none;
-    margin: 10px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #8892B0;
+  font-size: small;
+  list-style: none;
+  margin: 10px 0px;
 }
-
 .skill-list li::before {
-    color: #F67280;
-    content: "►";
-    display: inline-block;
-    width: 10px;
+  color: #F67280;
+  content: "►";
+  display: inline-block;
+  width: 20px;
 }
-
 .skill-list li {
-    margin: 0 0 10px 15px;
-    font-family: var(--font-mono);
-    white-space: nowrap;
+  margin: 0 0 10px 15px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  white-space: nowrap;
 }
-
-.--bg-color-advanced{
-    background-color: #ff2238;
+.skill-list li span {
+  color: white;
 }
-
-.--bg-color-intermediate{
-    background-color: #ff4b5d;
+.skill-list .--bg-color-advanced {
+  background-color: #ff2238;
 }
-
-.--bg-color-basic{
-    background-color: #F67280;
+.skill-list .--bg-color-intermediate {
+  background-color: #ff4b5d;
 }
-
-
-.skill-list li:hover {
-    color: #F67280;
+.skill-list .--bg-color-basic {
+  background-color: #F67280;
 }
 
 /* ----------------------------- EXPERIENCE ----------------------------- */
-
 .job-list {
-    color: #8892B0;
-    margin: 20px 0px;
-    padding: 0 20px;
+  color: #8892B0;
+  margin: 20px 0px;
+  padding: 0 20px;
 }
-
 .job-list li {
-    margin: 0 0 15px 15px;
-    font-family: var(--font-mono);
-    line-height: 1.5;
-    font-weight: 400;
+  margin: 0 0 15px 15px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
-.job-list li:hover {
-    color: #F67280;
+.jumbotron {
+  background-color: #082844;
+  margin: 0;
+  padding: 0;
 }
-
-.jumbotron{
-    background-color: #082844;
-    margin: 0;
-    padding: 0;
-}
-
-.my-4{
-    background-color: #F67280;
+.jumbotron .my-4 {
+  background-color: #F67280;
 }
 
 /* ----------------------------- CONTACT ----------------------------- */
-
 .contact-heading {
-    text-align: center;
-    margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .styledForm {
-    color: white;
-    font-weight: 400;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 1px solid #F67280;
-    transition: all 0.3s;
-    padding: 7px;
-    margin-bottom: 10px;
-    width: 100%;
-    resize: none;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #F67280;
+  transition: all 0.3s;
+  padding: 7px;
+  margin-bottom: 10px;
+  width: 100%;
+  resize: none;
 }
 
 .submitBtn {
-    width: 100%;
-    background: #082844;
-    border-radius: 5px;
-    border: 1px solid #F67280;
-    cursor: pointer;
-    color: #F67280;
-    font-size: 18px;
-    padding: 10px 10px;
-    margin: 0;
-    font-weight: 400;
+  width: 100%;
+  background: #082844;
+  border-radius: 5px;
+  border: 1px solid #F67280;
+  cursor: pointer;
+  color: #F67280;
+  font-size: 18px;
+  padding: 10px 10px;
+  margin: 0;
+  font-weight: 400;
 }
 
 .submitBtn:hover {
-    background-color: rgb(246, 116, 129, 0.1);
-    font-weight: 700;
-    transition: 200ms;
+  background-color: rgba(246, 116, 129, 0.1);
+  font-weight: 700;
+  transition: 200ms;
 }
-
-
-/* ----------------------------- RESPONSIVE ----------------------------- */
 
 @media only screen and (min-width: 480px) {
-
-    .conocemeBtn {
-        text-align: unset;
-    }
-
-    .main {
-        justify-self: center;
-        padding-top: 100px;
-    }
-
-    .containerBtn{
-        padding: 0 200px;
-    }
+  .navbar .containerBtn {
+    padding: 0 200px;
+  }
+  .main {
+    justify-self: center;
+    padding-top: 100px;
+  }
+  .main .conocemeBtn {
+    text-align: unset;
+  }
 }
-
 @media only screen and (min-width: 768px) {
-
-    .containerDescription {
-        width: 50%;
-    }
-
-    .hamburgerIcon {
-        display: none;
-    }
-
-    .containerBtn{
-        padding: 0;
-    }
-
-    .menu{
-        margin-right: 20px;
-    }
-    
-    .menu ol {
-        list-style-type: decimal-leading-zero;
-        color: #F67280;
-        margin-right: 30px;
-    }
-    
-    .menu li {
-        margin-left: 50px;
-    }
-
-    .menu ol a {
-        font-family: var(--font-mono);
-        text-align: center;
-        color: white !important;
-        font-size: small;
-    }
-
-    nav a:hover {
-        color: #F67280 !important;
-    }
-
-    .containerBtn {
-        margin-top: 2px;
-    }
-
-    .containerBtn a {
-        color: #F67280;
-        font-size: small;
-        padding: 12px 15px;
-        border: 1px solid #F67280;
-        border-radius: 5px;
-    }
-
-    section h2 {
-        color: #CCD6F6;
-        font-size: 35px;
-        text-shadow: 1px 1px 5px black;
-    }
-
-    section h2:hover {
-        color: #F67280
-    }
-
-    .grid-section {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        column-gap: 50px;
-        max-width: 1200px;
-    }
-
-    .grid-section .skill-list {
-        order: 1;
-        margin-left: 50px;
-    }
-
-    .child-image img {
-        width: 80%;
-    }
+  .containerDescription {
+    width: 50%;
+  }
+  .hamburgerIcon {
+    display: none;
+  }
+  .navbar .containerBtn {
+    padding: 0;
+  }
+  .menu {
+    margin-right: 20px;
+  }
+  .menu ol {
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    list-style-type: decimal-leading-zero;
+    margin-right: 30px;
+  }
+  .menu ol li {
+    color: #F67280;
+    margin-left: 50px;
+  }
+  .menu ol li a {
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    text-align: center;
+    color: white !important;
+    font-size: small;
+  }
+  .menu ol li a:hover {
+    color: #F67280 !important;
+  }
+  .menu .containerBtn {
+    margin-top: 2px;
+  }
+  .menu .containerBtn a {
+    color: #F67280;
+    font-size: small;
+    padding: 12px 20px;
+    border: 1px solid #F67280;
+    border-radius: 5px;
+  }
+  section h2 {
+    font-size: 35px;
+    text-shadow: 1px 1px 5px black;
+  }
+  section h2:hover {
+    color: #F67280;
+  }
+  .grid-section {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 50px;
+    max-width: 1200px;
+  }
+  .grid-section .skill-list {
+    order: 1;
+    margin-left: 50px;
+  }
+  .grid-section img {
+    width: 80%;
+  }
 }
+
+/*# sourceMappingURL=estilos.css.map */

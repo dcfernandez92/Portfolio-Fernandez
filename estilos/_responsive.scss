@@ -1,0 +1,93 @@
+@media only screen and (min-width: 480px) {
+
+    .navbar .containerBtn {
+        padding: 0 200px;
+    }
+
+    .main {
+        justify-self: center;
+        padding-top: 100px;
+
+        .conocemeBtn {
+            text-align: unset;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .containerDescription {
+        width: 50%;
+    }
+
+    .hamburgerIcon {
+        display: none;
+    }
+
+    .navbar .containerBtn {
+        padding: 0;
+    }
+
+    .menu {
+        margin-right: 20px;
+
+        ol {
+            font-family: $font-mono;
+            list-style-type: decimal-leading-zero;            
+            margin-right: 30px;
+
+            li {
+                color: $detail-text-color;
+                margin-left: 50px;
+
+                a {
+                    font-family: $font-mono;
+                    text-align: center;
+                    color: white !important;
+                    font-size: small;
+
+                    &:hover {
+                        color: $detail-text-color !important;
+                    }
+                }
+            }
+        }
+
+        .containerBtn {
+            margin-top: 2px;
+
+            a {
+                color: $detail-text-color;
+                font-size: small;
+                padding: 12px 20px;
+                border: 1px solid $detail-text-color;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    section h2 {
+        font-size: 35px;
+        text-shadow: 1px 1px 5px black;
+
+        &:hover{
+            color: $detail-text-color;
+        }
+    }
+    
+    .grid-section {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        column-gap: 50px;
+        max-width: 1200px;
+
+        .skill-list {
+            order: 1;
+            margin-left: 50px;
+        }
+
+        img {
+            width: 80%;
+        }
+    }    
+}
