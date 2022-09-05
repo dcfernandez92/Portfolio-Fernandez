@@ -31,11 +31,11 @@ li:hover{
     background-color: $bg-color;
 }
 
-@import "_nav";
-@import "_main";
-@import "_footer";
-@import "_about";
-@import "_experience";
-@import "_work";
-@import "_contact";
-@import "_responsive";
+@import "components/nav";
+@import "components/main";
+@import "components/footer";
+@import "pages/about";
+@import "pages/experience";
+@import "pages/work";
+@import "pages/contact";
+@import "components/responsive";
