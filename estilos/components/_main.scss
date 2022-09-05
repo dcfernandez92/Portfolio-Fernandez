@@ -30,7 +30,7 @@
 
     p {
         margin: 20px 0 0 3px;
-        color: map-get($map: $palette, $key: 'text-color');
+        color: map-get($map: $palette, $key: 'text-color2');
         line-height: 1.6;
         font-weight: 600;
     }
