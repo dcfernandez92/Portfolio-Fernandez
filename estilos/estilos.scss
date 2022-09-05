@@ -14,6 +14,14 @@ $palette: (
     'text-color2': #8892B0
 );
 
+@mixin formatBtn($color, $font-family, $border, $border-radius, $padding){
+    color: $color;
+    font-family: $font-family;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+}
+
 a {
     text-decoration: none;
 
@@ -33,6 +41,7 @@ li:hover{
     grid-template-rows: 80px auto 50px;
     background-color: map-get($map: $palette, $key: 'bg-color'); 
 }
+
 
 @import "components/nav";
 @import "components/main";

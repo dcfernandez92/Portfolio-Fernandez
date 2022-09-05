@@ -1,12 +1,8 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    animation-duration: 0.8s;
-    animation-name: aparecer;
-    animation-direction: normal;
-    animation-iteration-count: 1;
-    background-color: #082844;
+    align-items: center;    
+    background-color: #082844;  
 
     .logo {
         margin: 10px 20px;
@@ -19,7 +15,7 @@
 
     .navbar-toggler {
         border: none;
-    
+
         .hamburgerIcon {
             color: map-get($map: $palette, $key: 'detail-text-color');
             font-size: 30px;
@@ -28,25 +24,37 @@
 
     .navbar-nav .nav-link {
         color: map-get($map: $palette, $key: 'white-text-color');
-    
+
         &:hover {
             color: map-get($map: $palette, $key: 'detail-text-color');
         }
     }
 
     .containerBtn {
-        padding: 0 50px;
-    
-        a{
-            border: 1px solid map-get($map: $palette, $key: 'detail-text-color');
-            border-radius: 5px;
-            color: map-get($map: $palette, $key: 'detail-text-color');
-    
-            &:hover{
+        
+
+        a {
+            @include formatBtn(
+                map-get($map: $palette, $key: 'detail-text-color'), 
+                $font-mono, 
+                1px solid map-get($map: $palette, $key: 'detail-text-color'), 
+                5px, 
+                auto 50px
+            );
+            
+            &:hover {
+                transition: 0.2s;
                 background-color: rgb(246, 116, 129, 0.1);
             }
         }
-    }    
+    }
+}
+
+.animation{
+    animation-duration: 0.8s;
+    animation-name: aparecer;
+    animation-direction: normal;
+    animation-iteration-count: 1;
 }
 
 @keyframes aparecer {
