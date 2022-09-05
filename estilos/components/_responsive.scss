@@ -44,7 +44,7 @@
             margin-right: 30px;
 
             li {
-                color: $detail-text-color;
+                color: map-get($map: $palette, $key: 'detail-text-color');
                 margin-left: 50px;
 
                 a {
@@ -54,7 +54,7 @@
                     font-size: small;
 
                     &:hover {
-                        color: $detail-text-color !important;
+                        color:map-get($map: $palette, $key: 'detail-text-color') !important;
                     }
                 }
             }
@@ -64,10 +64,10 @@
             margin-top: 2px;
 
             a {
-                color: $detail-text-color;
+                color: map-get($map: $palette, $key: 'detail-text-color');
                 font-size: small;
                 padding: 12px 20px;
-                border: 1px solid $detail-text-color;
+                border: 1px solid map-get($map: $palette, $key: 'detail-text-color');
                 border-radius: 5px;
             }
         }
@@ -78,7 +78,7 @@
         text-shadow: 1px 1px 5px black;
 
         &:hover {
-            color: $detail-text-color;
+            color: map-get($map: $palette, $key: 'detail-text-color');
         }
     }
 

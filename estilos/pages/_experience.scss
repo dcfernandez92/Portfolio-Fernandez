@@ -1,5 +1,5 @@
 .job-list {
-    color: $text-color2;
+    color: map-get($map: $palette, $key: 'text-color2');
     margin: 20px 0px;
     padding: 0 20px;
 

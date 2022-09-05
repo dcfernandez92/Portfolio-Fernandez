@@ -4,7 +4,7 @@
     padding: 0;
 
     .my-4 {
-        background-color: $detail-text-color;
+        background-color: map-get($map: $palette, $key: 'detail-text-color');
     }
 }
 

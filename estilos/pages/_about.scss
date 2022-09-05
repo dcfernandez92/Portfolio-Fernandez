@@ -19,13 +19,13 @@
 .skill-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    color: $text-color2;
+    color: map-get($map: $palette, $key: 'text-color2');
     font-size: small;
     list-style: none;
     margin: 15px 50px;
 
     li::before {
-        color: $detail-text-color;
+        color: map-get($map: $palette, $key: 'detail-text-color');
         content: "►";
         display: inline-block;
         width: 20px;
@@ -37,7 +37,7 @@
         white-space: nowrap;
 
         span{
-            color: $white-text-color;
+            color: map-get($map: $palette, $key: 'white-text-color');
         }
     }
 
@@ -50,7 +50,7 @@
     }
     
     .--bg-color-basic {
-        background-color: $detail-text-color;
+        background-color: map-get($map: $palette, $key: 'detail-text-color');
     }
 }
 

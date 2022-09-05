@@ -21,16 +21,16 @@
         border: none;
     
         .hamburgerIcon {
-            color: $detail-text-color;
+            color: map-get($map: $palette, $key: 'detail-text-color');
             font-size: 30px;
         }
     }
 
     .navbar-nav .nav-link {
-        color: $white-text-color;
+        color: map-get($map: $palette, $key: 'white-text-color');
     
         &:hover {
-            color: $detail-text-color;
+            color: map-get($map: $palette, $key: 'detail-text-color');
         }
     }
 
@@ -38,9 +38,9 @@
         padding: 0 50px;
     
         a{
-            border: 1px solid $detail-text-color;
+            border: 1px solid map-get($map: $palette, $key: 'detail-text-color');
             border-radius: 5px;
-            color: $detail-text-color;
+            color: map-get($map: $palette, $key: 'detail-text-color');
     
             &:hover{
                 background-color: rgb(246, 116, 129, 0.1);

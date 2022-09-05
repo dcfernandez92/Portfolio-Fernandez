@@ -8,7 +8,7 @@
 
     h1 {
         margin-left: 5px;
-        color: $detail-text-color;
+        color: map-get($map: $palette, $key: 'detail-text-color');
         font-weight: 400;
         font-family: $font-mono;
         font-size: 18px;
@@ -21,22 +21,22 @@
     }
 
     h2 {
-        color: $text-color;
+        color: map-get($map: $palette, $key: 'text-color');
     }
     
     h3 {
-        color: $text-color2;
+        color: map-get($map: $palette, $key: 'text-color2');
     }
 
     p {
         margin: 20px 0 0 3px;
-        color: $text-color2;
+        color: map-get($map: $palette, $key: 'text-color');
         line-height: 1.6;
         font-weight: 600;
     }
 
     span {
-        color: $detail-text-color;
+        color: map-get($map: $palette, $key: 'detail-text-color');
     }
 
     .conocemeBtn {
@@ -44,10 +44,10 @@
         text-align: center;
 
         a{
-            color: $detail-text-color;
+            color: map-get($map: $palette, $key: 'detail-text-color');
             font-family: $font-mono;
             padding: 15px 50px;
-            border: 1px solid $detail-text-color;
+            border: 1px solid map-get($map: $palette, $key: 'detail-text-color');
             border-radius: 5px;
 
             &:hover {
