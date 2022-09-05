@@ -5,11 +5,22 @@
 }
 
 $font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-$bg-color: #082844;
-$detail-text-color: #F67280;
-$white-text-color: white;
-$text-color: #CCD6F6;
-$text-color2: #8892B0;
+
+$palette: (
+    'bg-color': #082844,
+    'detail-text-color': #F67280,
+    'white-text-color': white,
+    'text-color': #CCD6F6,
+    'text-color2': #8892B0
+);
+
+@mixin formatBtn($color, $font-family, $border, $border-radius, $padding){
+    color: $color;
+    font-family: $font-family;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+}
 
 a {
     text-decoration: none;
@@ -20,7 +31,7 @@ a {
 }
 
 li:hover{
-    color: $detail-text-color;
+    color: map-get($map: $palette, $key: 'detail-text-color'); 
 }
 
 .grid-container {
@@ -28,14 +39,15 @@ li:hover{
     display: grid;
     min-height: 100vh;
     grid-template-rows: 80px auto 50px;
-    background-color: $bg-color;
+    background-color: map-get($map: $palette, $key: 'bg-color'); 
 }
 
-@import "_nav";
-@import "_main";
-@import "_footer";
-@import "_about";
-@import "_experience";
-@import "_work";
-@import "_contact";
-@import "_responsive";
+
+@import "components/nav";
+@import "components/main";
+@import "components/footer";
+@import "pages/about";
+@import "pages/experience";
+@import "pages/work";
+@import "pages/contact";
+@import "components/responsive";

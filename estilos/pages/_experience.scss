@@ -1,5 +1,5 @@
 .job-list {
-    color: $text-color2;
+    color: map-get($map: $palette, $key: 'text-color2');
     margin: 20px 0px;
     padding: 0 20px;
 
@@ -8,5 +8,9 @@
         font-family: $font-mono;
         line-height: 1.5;
         font-weight: 400;
+
+        &:hover{
+            color: map-get($map: $palette, $key: 'text-color');
+        }
     }
 }

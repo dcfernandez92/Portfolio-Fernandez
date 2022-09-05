@@ -1,14 +1,11 @@
 .main {
+    @extend .animation;
     padding: 50px 30px;
-    line-height: 1.3;
-    animation-duration: 0.8s;
-    animation-name: aparecer;
-    animation-direction: normal;
-    animation-iteration-count: 1;
+    line-height: 1.3;   
 
     h1 {
         margin-left: 5px;
-        color: $detail-text-color;
+        color: map-get($map: $palette, $key: 'detail-text-color');
         font-weight: 400;
         font-family: $font-mono;
         font-size: 18px;
@@ -21,42 +18,35 @@
     }
 
     h2 {
-        color: $text-color;
+        color: map-get($map: $palette, $key: 'text-color');
     }
-    
+
     h3 {
-        color: $text-color2;
+        color: map-get($map: $palette, $key: 'text-color2');
     }
 
     p {
         margin: 20px 0 0 3px;
-        color: $text-color2;
+        color: map-get($map: $palette, $key: 'text-color2');
         line-height: 1.6;
         font-weight: 600;
     }
 
     span {
-        color: $detail-text-color;
+        color: map-get($map: $palette, $key: 'detail-text-color');
     }
 
     .conocemeBtn {
         margin-top: 50px;
         text-align: center;
 
-        a{
-            color: $detail-text-color;
-            font-family: $font-mono;
-            padding: 15px 50px;
-            border: 1px solid $detail-text-color;
-            border-radius: 5px;
+        a {
+            @include formatBtn(map-get($map: $palette, $key: 'detail-text-color'), $font-mono, 1px solid map-get($map: $palette, $key: 'detail-text-color'), 5px, 15px 50px);
 
             &:hover {
-                text-decoration: none;
-                text-align: center;
                 transition: 0.2s;
                 background-color: rgb(246, 116, 129, 0.1);
             }
         }
     }
 }
-

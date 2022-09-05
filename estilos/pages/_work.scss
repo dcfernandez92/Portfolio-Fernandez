@@ -1,0 +1,22 @@
+.jumbotron {
+    background-color: #082844;
+    margin: 0;
+    padding: 0;
+
+    .my-4 {
+        background-color: map-get($map: $palette, $key: 'detail-text-color');
+    }
+    
+    span{
+        color: map-get($map: $palette, $key: 'text-color2');
+    }
+
+    p:hover{
+        color: map-get($map: $palette, $key: 'text-color');
+
+        & span{
+            color: map-get($map: $palette, $key: 'detail-text-color');
+        }
+    }
+}
+

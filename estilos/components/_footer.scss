@@ -13,20 +13,20 @@ footer {
         }
 
         i {
-            color: $text-color2;
+            color: map-get($map: $palette, $key: 'text-color2');
 
             &:hover {
-                color: $detail-text-color;
+                color: map-get($map: $palette, $key: 'detail-text-color');
             }
         }
     }
 
     .copyright a {
-        color: $text-color2;
+        color: map-get($map: $palette, $key: 'text-color2');
         font-size: small;
 
         &:hover {
-            color: $detail-text-color;
+            color: map-get($map: $palette, $key: 'detail-text-color');
         }
     }
 }
