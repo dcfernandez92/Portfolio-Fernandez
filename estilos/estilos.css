@@ -214,6 +214,9 @@ footer .copyright a:hover {
   line-height: 1.5;
   font-weight: 400;
 }
+.job-list li:hover {
+  color: #CCD6F6;
+}
 
 .jumbotron {
   background-color: #082844;

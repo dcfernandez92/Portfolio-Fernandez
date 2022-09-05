@@ -8,5 +8,9 @@
         font-family: $font-mono;
         line-height: 1.5;
         font-weight: 400;
+
+        &:hover{
+            color: map-get($map: $palette, $key: 'text-color');
+        }
     }
 }
