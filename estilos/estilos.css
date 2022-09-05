@@ -226,6 +226,15 @@ footer .copyright a:hover {
 .jumbotron .my-4 {
   background-color: #F67280;
 }
+.jumbotron span {
+  color: #8892B0;
+}
+.jumbotron p:hover {
+  color: #CCD6F6;
+}
+.jumbotron p:hover span {
+  color: #F67280;
+}
 
 .contact-heading {
   text-align: center;
