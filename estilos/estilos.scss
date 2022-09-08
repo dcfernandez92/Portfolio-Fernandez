@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
+$palette: (
+    'bg-color': #082844,
+    'detail-text-color': #F67280,
+    'white-text-color': white,
+    'text-color': #CCD6F6,
+    'text-color2': #8892B0
+);
+
+@mixin formatBtn($color, $font-family, $border, $border-radius, $padding){
+    color: $color;
+    font-family: $font-family;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+li:hover{
+    color: map-get($map: $palette, $key: 'detail-text-color'); 
+}
+
+.grid-container {
+    font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", system-ui, sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 80px auto 50px;
+    background-color: map-get($map: $palette, $key: 'bg-color'); 
+}
+
+
+@import "components/nav";
+@import "components/main";
+@import "components/footer";
+@import "pages/about";
+@import "pages/experience";
+@import "pages/work";
+@import "pages/contact";
+@import "components/responsive";

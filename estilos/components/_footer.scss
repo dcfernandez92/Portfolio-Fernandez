@@ -1,0 +1,32 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            padding-left: 10px;
+        }
+
+        i {
+            color: map-get($map: $palette, $key: 'text-color2');
+
+            &:hover {
+                color: map-get($map: $palette, $key: 'detail-text-color');
+            }
+        }
+    }
+
+    .copyright a {
+        color: map-get($map: $palette, $key: 'text-color2');
+        font-size: small;
+
+        &:hover {
+            color: map-get($map: $palette, $key: 'detail-text-color');
+        }
+    }
+}

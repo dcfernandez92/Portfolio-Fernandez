@@ -1,0 +1,37 @@
+.contact-heading {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.styledForm {
+    color: map-get($map: $palette, $key: 'white-text-color');
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid map-get($map: $palette, $key: 'detail-text-color');
+    transition: all 0.3s;
+    padding: 7px;
+    margin-bottom: 10px;
+    width: 100%;
+    resize: none;
+}
+
+.submitBtn {
+    width: 100%;
+    background: #082844;
+    border-radius: 5px;
+    border: 1px solid map-get($map: $palette, $key: 'detail-text-color');
+    cursor: pointer;
+    color: map-get($map: $palette, $key: 'detail-text-color');
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.submitBtn:hover {
+    background-color: rgb(246, 116, 129, 0.1);
+    font-weight: 700;
+    transition: 200ms;
+}
