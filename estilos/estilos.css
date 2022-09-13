@@ -63,10 +63,23 @@ li:hover {
 }
 
 .animation, .main {
-  animation-duration: 0.8s;
-  animation-name: aparecer;
-  animation-direction: normal;
-  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes aparecer {
@@ -176,6 +189,9 @@ footer .copyright a:hover {
   list-style: none;
   margin: 15px 50px;
 }
+.skill-list .badge-pill {
+  padding: 0.5em 0.6em;
+}
 .skill-list li::before {
   color: #F67280;
   content: "►";
@@ -271,6 +287,10 @@ footer .copyright a:hover {
   transition: 200ms;
 }
 
+textarea {
+  min-height: 30vh;
+}
+
 @media only screen and (min-width: 360px) {
   .skill-list {
     grid-template-columns: repeat(2, 1fr);
@@ -339,8 +359,9 @@ footer .copyright a:hover {
   }
   .grid-section {
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    column-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
     max-width: 1200px;
   }
   .grid-section .skill-list {
@@ -350,6 +371,4 @@ footer .copyright a:hover {
   .grid-section img {
     width: 80%;
   }
-}
-
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */
